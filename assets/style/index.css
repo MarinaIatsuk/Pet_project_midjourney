@@ -17,7 +17,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.result__list-item, .terms__item-text, .greeting__content-text {
+.about__content-text, .result__list-item, .terms__item-text, .greeting__content-text {
   font-family: "Museo Sans Cyrl", sans-serif;
   color: #000;
   font-size: 40px;
@@ -66,6 +66,8 @@ body {
 }
 
 .header {
+  margin-top: 8%;
+  margin-bottom: 8%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,7 +89,7 @@ body {
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  width: 27.3%;
+  width: 25%;
   height: 21.16%;
   border-radius: 0px 70px 0px 55px;
   background: #FFF;
@@ -113,11 +115,12 @@ body {
   flex-direction: column;
   color: #DF8CB0;
   justify-content: center;
-  width: 42.08%;
+  width: 40%;
   height: 29.2%;
   border-radius: 0px 80.028px 0px 59px;
   background: #FFF;
   align-self: flex-start;
+  padding-top: 4%;
 }
 .header__title-first {
   font-size: 64px;
@@ -126,7 +129,7 @@ body {
   font-weight: 400;
   line-height: 113%;
   /* 72.32px */
-  letter-spacing: 6px;
+  letter-spacing: -6px;
   text-transform: uppercase;
 }
 .header__title-second {
@@ -145,6 +148,7 @@ body {
   flex-direction: column;
   height: 80%;
   width: 70%;
+  gap: 1.1%;
 }
 @media screen and (max-width: 1000px) {
   .main {
@@ -192,7 +196,7 @@ body {
   border: 4px solid #DF8CB0;
 }
 .terms__item-text {
-  width: 80%;
+  width: 70%;
   font-size: 27px;
   letter-spacing: 0.54px;
 }
@@ -215,7 +219,8 @@ body {
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 123%; /* 49.2px */
+  line-height: 123%;
+  /* 49.2px */
   letter-spacing: 1.2px;
 }
 .result__list {
@@ -230,10 +235,113 @@ body {
 }
 .result__list li::before {
   color: #DF8CB0;
-  content: "•"; /* Сам маркер */
-  padding-right: 4%; /* Расстояние от маркера до текста */
+  content: "•";
+  /* Сам маркер */
+  padding-right: 4%;
+  /* Расстояние от маркера до текста */
 }
 
+.quote-first {
+  height: 1.8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/main/frame.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quote-first__text {
+  width: 70%;
+  height: 70%;
+  padding-top: 3%;
+  color: #DF8CB0;
+  text-align: center;
+  font-family: "Kosko Regular", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 233%;
+  /* 55.92px */
+  letter-spacing: 4.08px;
+  text-transform: uppercase;
+}
+
+.about {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about__image {
+  height: 43%;
+  display: flex;
+  justify-content: space-between;
+}
+.about__image-child {
+  width: 48%;
+  background-image: url(../images/main/author-with-child.png);
+  background-repeat: no-repeat;
+  border-radius: 68px;
+}
+.about__image-alone {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 48%;
+  height: 100%;
+  background-image: url(../images/main/author.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 68px;
+}
+.about__image-alone .inscription__container {
+  width: 70%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 65px 0px 59px 0px;
+  background: #FFF;
+}
+.about__image-alone .inscription__container .inscription__title {
+  height: 50%;
+  align-self: flex-start;
+  color: #DF8CB0;
+  font-family: "Kosko Regular", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142%;
+  /* 90.88px */
+  transform: rotate(-6.01deg);
+  padding-left: 12%;
+  padding-top: 5%;
+}
+.about__image-alone .inscription__container .inscription__text {
+  height: 50%;
+  align-self: end;
+  width: 96%;
+  color: #DF8CB0;
+  font-family: "Russo One", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 123%;
+  /* 31.98px */
+  letter-spacing: 0.78px;
+  text-align: right;
+}
+.about__content {
+  height: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+.about__content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 49%;
+}
 .footer {
   display: flex;
   height: 5%;
