@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Russo One";
+    src: url("../fonts/Russo_One/RussoOne-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Museo Sans Cyrl";
+    src: url("../fonts/MuseoSansCyrl/museosanscyrl_100.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Kosko Regular";
+    src: url("../fonts/KoskoRegular/KoskoRegular-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+$font-main: 'Museo Sans Cyrl', sans-serif;
+$font-title: 'Russo One', sans-serif;
+$font-inscription: 'Kosko Regular', sans-serif;
+
+$color-main: #000;
+$color-title: #DF8CB0;
+
+
+
+%main-text {
+	font-family: $font-main;
+  color: $color-main;
+	font-size: 40px;
+font-style: normal;
+font-weight: 250;
+line-height: 126%; /* 50.4px */
+letter-spacing: 0.8px;
+    
+}
+
+html {
+    font-size: 100%;
+  
+    @media screen and (max-width: 900px) {
+      font-size: 95%;
+    }
+  
+    @media screen and (max-width: 700px) {
+      font-size: 90%;
+    }
+  
+    @media screen and (max-width: 500px) {
+      font-size: 85%;
+    }
+  
+    @media screen and (max-width: 400px) {
+      font-size: 75%;
+    }
+  }
+
+
+
+// .text {
+// 	@extend %item-base;
+// 	margin-top: 20px;
+// }
+
+

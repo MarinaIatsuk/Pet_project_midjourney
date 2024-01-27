@@ -1,0 +1,217 @@
+@import "./template";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 18903px; //временно! м.б поставить 400vh
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3.3%;
+    width: 70%;
+
+    @media screen and (max-width: 1000px) {
+        //временная точка
+        width: 95%;
+    }
+
+    border-radius: 81px;
+    background-image: url(../images/header/girl-glass.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__dates {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        width: 27.3%;
+        height: 21.16%;
+        border-radius: 0px 70px 0px 55px;
+        background: #FFF;
+        align-self: flex-end;
+        font-family: $font-title;
+        color: $color-title;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 113%;
+        /* 45.2px */
+        letter-spacing: -0.8px;
+
+        &-first {
+            margin-right: 4px;
+        }
+
+        &-second {
+            margin-right: 4px;
+            margin-bottom: 19px;
+
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        color: $color-title;
+        justify-content: center;
+        width: 42.08%;
+        height: 29.2%;
+        border-radius: 0px 80.028px 0px 59px;
+        background: #FFF;
+        align-self: flex-start;
+
+
+        &-first {
+            font-size: 64px;
+            // font-family: "Amatic SC", sans-serif; //kosko не встает
+            font-family: $font-inscription;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 113%;
+            /* 72.32px */
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        &-second {
+            font-family: $font-title;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 113%;
+            /* 108.48px */
+            letter-spacing: -2.88px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 70%;
+
+    @media screen and (max-width: 1000px) {
+        //временная точка
+        width: 95%;
+    }
+}
+
+.greeting {
+    display: flex;
+    justify-content: space-between;
+    height: 4.06%;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        width: 46.55%;
+
+        &-title {
+            font-family: $font-title;
+            color: #000;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 123%;
+            /* 49.2px */
+            letter-spacing: 1.2px;
+            margin-bottom: 10.09%
+        }
+
+        &-text {
+            @extend %main-text;
+        }
+    }
+
+    &__image {
+        width: 44, 42%;
+
+        // &__img {}
+    }
+}
+
+.terms{
+    display: flex;
+    justify-content: space-between;
+    height: 1.47%;
+    
+    
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22.66%;
+        border-radius: 61px;
+border: 4px solid #DF8CB0;
+        &-text{
+            width: 80%;
+            @extend %main-text;
+            font-size: 27px;
+            letter-spacing: 0.54px;
+
+        }
+    }
+}
+.image{
+    width: 100%;
+    height: 4%;
+    &__img{
+        width: 100%;
+    }
+}
+
+.result{
+    height: 6%;
+    &__title{
+        height: 10%;
+        color: $color-main;
+font-family: $font-title;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 123%; /* 49.2px */
+letter-spacing: 1.2px;
+    }
+    &__list{
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-left: 5%;
+        &-item{
+            @extend %main-text;
+
+        }
+        li {
+            list-style-type: none; 
+           }
+           li::before {
+            color: $color-title;
+            content: "•"; /* Сам маркер */
+            padding-right: 4%; /* Расстояние от маркера до текста */
+           }
+        
+    }
+}
+
+.footer {
+    display: flex;
+    height: 5%;
+
+}

@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Russo One";
+  src: url("../fonts/Russo_One/RussoOne-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../fonts/MuseoSansCyrl/museosanscyrl_100.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kosko Regular";
+  src: url("../fonts/KoskoRegular/KoskoRegular-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+.result__list-item, .terms__item-text, .greeting__content-text {
+  font-family: "Museo Sans Cyrl", sans-serif;
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: 126%; /* 50.4px */
+  letter-spacing: 0.8px;
+}
+
+html {
+  font-size: 100%;
+}
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 95%;
+  }
+}
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 18903px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 3.3%;
+  width: 70%;
+  border-radius: 81px;
+  background-image: url(../images/header/girl-glass.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 1000px) {
+  .header {
+    width: 95%;
+  }
+}
+.header__dates {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  width: 27.3%;
+  height: 21.16%;
+  border-radius: 0px 70px 0px 55px;
+  background: #FFF;
+  align-self: flex-end;
+  font-family: "Russo One", sans-serif;
+  color: #DF8CB0;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113%;
+  /* 45.2px */
+  letter-spacing: -0.8px;
+}
+.header__dates-first {
+  margin-right: 4px;
+}
+.header__dates-second {
+  margin-right: 4px;
+  margin-bottom: 19px;
+}
+.header__title {
+  display: flex;
+  flex-direction: column;
+  color: #DF8CB0;
+  justify-content: center;
+  width: 42.08%;
+  height: 29.2%;
+  border-radius: 0px 80.028px 0px 59px;
+  background: #FFF;
+  align-self: flex-start;
+}
+.header__title-first {
+  font-size: 64px;
+  font-family: "Kosko Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113%;
+  /* 72.32px */
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+.header__title-second {
+  font-family: "Russo One", sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113%;
+  /* 108.48px */
+  letter-spacing: -2.88px;
+  text-transform: uppercase;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 70%;
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    width: 95%;
+  }
+}
+
+.greeting {
+  display: flex;
+  justify-content: space-between;
+  height: 4.06%;
+}
+.greeting__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 46.55%;
+}
+.greeting__content-title {
+  font-family: "Russo One", sans-serif;
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 123%;
+  /* 49.2px */
+  letter-spacing: 1.2px;
+  margin-bottom: 10.09%;
+}
+.greeting__image {
+  width: 44, 42%;
+}
+
+.terms {
+  display: flex;
+  justify-content: space-between;
+  height: 1.47%;
+}
+.terms__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22.66%;
+  border-radius: 61px;
+  border: 4px solid #DF8CB0;
+}
+.terms__item-text {
+  width: 80%;
+  font-size: 27px;
+  letter-spacing: 0.54px;
+}
+
+.image {
+  width: 100%;
+  height: 4%;
+}
+.image__img {
+  width: 100%;
+}
+
+.result {
+  height: 6%;
+}
+.result__title {
+  height: 10%;
+  color: #000;
+  font-family: "Russo One", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 123%; /* 49.2px */
+  letter-spacing: 1.2px;
+}
+.result__list {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 5%;
+}
+.result__list li {
+  list-style-type: none;
+}
+.result__list li::before {
+  color: #DF8CB0;
+  content: "•"; /* Сам маркер */
+  padding-right: 4%; /* Расстояние от маркера до текста */
+}
+
+.footer {
+  display: flex;
+  height: 5%;
+}/*# sourceMappingURL=index.css.map */
