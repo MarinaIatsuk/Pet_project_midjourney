@@ -15,13 +15,14 @@ body {
 }
 
 .header {
-    margin-top: 8%; //временная мера
-    margin-bottom: 8%; //временная мера
+    width: 41%;
+    height: 3.3%;
+    margin-top: 5%; //временная мера
+    margin-bottom: 5%; //временная мера
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 3.3%;
-    width: 70%;
+
 
     @media screen and (max-width: 1000px) {
         //временная точка
@@ -106,9 +107,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 80%;
-    width: 70%;
+    width: 41%;
 
-    gap: 1.1%; //временная мера
+    gap: 1%; //временная мера
 
 
     @media screen and (max-width: 1000px) {
@@ -171,6 +172,7 @@ body {
             @extend %main-text;
             font-size: 27px;
             letter-spacing: 0.54px;
+            text-align: center;
 
         }
     }
@@ -178,10 +180,15 @@ body {
 
 .image {
     width: 100%;
-    height: 4%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+
 
     &__img {
-        width: 100%;
+
+        height: 100%;
+
     }
 }
 
@@ -228,7 +235,7 @@ body {
 }
 
 .quote-first {
-    height: 1.8%;
+    height: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,9 +245,9 @@ body {
     background-position: center;
 
     &__text {
-        width: 70%;
+        max-width: 865px;
         height: 70%;
-        padding-top: 3%;
+        padding-top: 2.5%;
         color: $color-title;
 
         text-align: center;
@@ -254,25 +261,27 @@ body {
         text-transform: uppercase;
     }
 }
-.about{
+
+.about {
     height: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     &__image {
-        height: 43%;
+        height: 617px;
         display: flex;
         justify-content: space-between;
-    
+
         &-child {
             width: 48%;
             background-image: url(../images/main/author-with-child.png);
             background-repeat: no-repeat;
-            // background-position-x: center;
-            // background-size: 100%;
+            background-position-x: center;
+            background-size: 100%;
             border-radius: 68px;
         }
-    
+
         &-alone {
             display: flex;
             justify-content: end;
@@ -284,18 +293,18 @@ body {
             background-position: center;
             background-size: 100%;
             border-radius: 68px;
-    
+
             .inscription__container {
                 width: 70%;
                 height: 25%;
                 display: flex;
                 flex-direction: column;
-                border-radius: 65px 0px 59px 0px ;
+                border-radius: 65px 0px 59px 0px;
                 background: #FFF;
-    
+
                 .inscription__title {
                     height: 50%;
-                    align-self:flex-start;
+                    align-self: flex-start;
                     color: $color-title;
                     font-family: $font-inscription;
                     font-size: 64px;
@@ -307,7 +316,7 @@ body {
                     padding-left: 12%;
                     padding-top: 5%;
                 }
-    
+
                 .inscription__text {
                     height: 50%;
                     align-self: end;
@@ -325,24 +334,265 @@ body {
             }
         }
     }
-    &__content{
+
+    &__content {
         height: 55%;
         display: flex;
         justify-content: space-between;
-        &-text{
+
+        &-text {
             @extend %main-text;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 49%;
-            .about__item{
-                .about__heart{
+            width: 47%;
 
+            .about__item {
+                .about__heart {
+                   
                 }
             }
         }
     }
 }
+
+.quote-second {
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/main/frame.png);
+    background-repeat: no-repeat;
+    //background-size: cover;
+    background-position: center;
+
+    &__text {
+        max-width: 865px;
+        height: 70%;
+        padding-top: 2.5%;
+        color: $color-title;
+
+        text-align: center;
+        font-family: $font-inscription;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 233%;
+        /* 55.92px */
+        letter-spacing: 4.08px;
+        text-transform: uppercase;
+    }
+}
+
+.gallery {
+    max-height: 2786px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &__first_row {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__second_row {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    &__third_row {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__fourth_row {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .gallery__image {
+
+        .gallery__text {
+            color: $color-title;
+            text-align: center;
+            font-family: $font-title;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 123%;
+            /* 31.98px */
+            letter-spacing: 0.78px;
+
+            .gallery__txt {
+                max-width: 505px;
+                padding-top: 5%;
+            }
+        }
+
+        #tarantino {
+            height: 612px;
+
+        }
+
+        #girl_wolf {
+            height: 612px;
+        }
+
+        #girl_mushrooms {
+            height: 752px;
+        }
+
+        #girl_blue_flowers {
+            height: 804px;
+            margin-top: -130px;
+        }
+
+        #cocktail {
+            height: 618px;
+            margin-top: -130px;
+        }
+
+        #girl_orange_flowers {
+            height: 629px;
+        }
+
+        #girl_bear {
+            height: 631px;
+        }
+
+        #girl_robo_costume {
+            height: 694px;
+            margin-top: -30px;
+        }
+
+        #water_channel {
+            height: 657px;
+            margin-top: -30px;
+        }
+
+        #batman {
+            height: 631px;
+            margin-top: -38px;
+        }
+
+        #rabbit {
+            height: 592px;
+        }
+
+        #girl_blue_hair {
+            height: 627px;
+            margin-top: -35px;
+        }
+    }
+}
+
+.questions {
+    height: 3.2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__first {
+        display: flex;
+        justify-content: space-between;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 30%;
+
+            .questions__text {
+                color: $color-main;
+                font-family: $font-inscription;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117%;
+                /* 37.44px */
+                letter-spacing: 0.96px;
+                text-align: center;
+            }
+
+            .questions__line {}
+        }
+
+        &-image {}
+    }
+
+    &__second {
+        display: flex;
+        justify-content: space-between;
+
+        &-image {}
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 40%;
+
+            .questions__text {
+                color: $color-main;
+                font-family: $font-inscription;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117%;
+                /* 37.44px */
+                letter-spacing: 0.96px;
+                text-align: center;
+            }
+
+            .questions__line {}
+        }
+    }
+}
+
+.video {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+        color: $color-title;
+        text-align: center;
+        font-family: $font-title;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 123%;
+        /* 39.36px */
+        margin-bottom: 60px;
+    }
+
+   
+    iframe{
+        
+        border-radius: 20px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

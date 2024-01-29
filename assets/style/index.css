@@ -66,13 +66,13 @@ body {
 }
 
 .header {
-  margin-top: 8%;
-  margin-bottom: 8%;
+  width: 41%;
+  height: 3.3%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 3.3%;
-  width: 70%;
   border-radius: 81px;
   background-image: url(../images/header/girl-glass.png);
   background-repeat: no-repeat;
@@ -147,8 +147,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 80%;
-  width: 70%;
-  gap: 1.1%;
+  width: 41%;
+  gap: 1%;
 }
 @media screen and (max-width: 1000px) {
   .main {
@@ -199,14 +199,17 @@ body {
   width: 70%;
   font-size: 27px;
   letter-spacing: 0.54px;
+  text-align: center;
 }
 
 .image {
   width: 100%;
-  height: 4%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
 }
 .image__img {
-  width: 100%;
+  height: 100%;
 }
 
 .result {
@@ -242,7 +245,7 @@ body {
 }
 
 .quote-first {
-  height: 1.8%;
+  height: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,9 +254,9 @@ body {
   background-position: center;
 }
 .quote-first__text {
-  width: 70%;
+  max-width: 865px;
   height: 70%;
-  padding-top: 3%;
+  padding-top: 2.5%;
   color: #DF8CB0;
   text-align: center;
   font-family: "Kosko Regular", sans-serif;
@@ -273,7 +276,7 @@ body {
   justify-content: space-between;
 }
 .about__image {
-  height: 43%;
+  height: 617px;
   display: flex;
   justify-content: space-between;
 }
@@ -281,6 +284,8 @@ body {
   width: 48%;
   background-image: url(../images/main/author-with-child.png);
   background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 100%;
   border-radius: 68px;
 }
 .about__image-alone {
@@ -340,8 +345,190 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 49%;
+  width: 47%;
 }
+.quote-second {
+  height: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/main/frame.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quote-second__text {
+  max-width: 865px;
+  height: 70%;
+  padding-top: 2.5%;
+  color: #DF8CB0;
+  text-align: center;
+  font-family: "Kosko Regular", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 233%;
+  /* 55.92px */
+  letter-spacing: 4.08px;
+  text-transform: uppercase;
+}
+
+.gallery {
+  max-height: 2786px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.gallery__first_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.gallery__second_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.gallery__third_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.gallery__fourth_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.gallery .gallery__image .gallery__text {
+  color: #DF8CB0;
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 123%;
+  /* 31.98px */
+  letter-spacing: 0.78px;
+}
+.gallery .gallery__image .gallery__text .gallery__txt {
+  max-width: 505px;
+  padding-top: 5%;
+}
+.gallery .gallery__image #tarantino {
+  height: 612px;
+}
+.gallery .gallery__image #girl_wolf {
+  height: 612px;
+}
+.gallery .gallery__image #girl_mushrooms {
+  height: 752px;
+}
+.gallery .gallery__image #girl_blue_flowers {
+  height: 804px;
+  margin-top: -130px;
+}
+.gallery .gallery__image #cocktail {
+  height: 618px;
+  margin-top: -130px;
+}
+.gallery .gallery__image #girl_orange_flowers {
+  height: 629px;
+}
+.gallery .gallery__image #girl_bear {
+  height: 631px;
+}
+.gallery .gallery__image #girl_robo_costume {
+  height: 694px;
+  margin-top: -30px;
+}
+.gallery .gallery__image #water_channel {
+  height: 657px;
+  margin-top: -30px;
+}
+.gallery .gallery__image #batman {
+  height: 631px;
+  margin-top: -38px;
+}
+.gallery .gallery__image #rabbit {
+  height: 592px;
+}
+.gallery .gallery__image #girl_blue_hair {
+  height: 627px;
+  margin-top: -35px;
+}
+
+.questions {
+  height: 3.2%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.questions__first {
+  display: flex;
+  justify-content: space-between;
+}
+.questions__first-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30%;
+}
+.questions__first-content .questions__text {
+  color: #000;
+  font-family: "Kosko Regular", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 117%;
+  /* 37.44px */
+  letter-spacing: 0.96px;
+  text-align: center;
+}
+.questions__second {
+  display: flex;
+  justify-content: space-between;
+}
+.questions__second-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 40%;
+}
+.questions__second-content .questions__text {
+  color: #000;
+  font-family: "Kosko Regular", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 117%;
+  /* 37.44px */
+  letter-spacing: 0.96px;
+  text-align: center;
+}
+.video {
+  height: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.video__title {
+  color: #DF8CB0;
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 123%;
+  /* 39.36px */
+  margin-bottom: 60px;
+}
+.video iframe {
+  border-radius: 20px;
+}
+
 .footer {
   display: flex;
   height: 5%;
