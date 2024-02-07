@@ -7,16 +7,18 @@
 }
 
 body {
+    height: 21347px; //временно! м.б поставить 400vh
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-    height: 18903px; //временно! м.б поставить 400vh
+    justify-content: space-around;
+
 }
 
 .header {
     width: 41%;
-    height: 3.3%;
+    height: 2.83%;
     margin-top: 5%; //временная мера
     margin-bottom: 5%; //временная мера
     display: flex;
@@ -91,26 +93,19 @@ body {
         }
 
         &-second {
-            font-family: $font-title;
-            font-size: 96px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 113%;
-            /* 108.48px */
-            letter-spacing: -2.88px;
-            text-transform: uppercase;
+            @extend %title-pink-big;
         }
     }
 }
 
 .main {
+    border: 1px solid grey;
+    height: 20142px;
+    width: 41%;
     display: flex;
     flex-direction: column;
-    height: 80%;
-    width: 41%;
-
-    gap: 1%; //временная мера
-
+    align-items: center;
+    justify-content: space-around;
 
     @media screen and (max-width: 1000px) {
         //временная точка
@@ -119,9 +114,9 @@ body {
 }
 
 .greeting {
+    height: 3.05%;
     display: flex;
     justify-content: space-between;
-    height: 4.06%;
 
     &__content {
         display: flex;
@@ -130,15 +125,7 @@ body {
         width: 46.55%;
 
         &-title {
-            font-family: $font-title;
-            color: #000;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 123%;
-            /* 49.2px */
-            letter-spacing: 1.2px;
-            margin-bottom: 10.09%
+            @extend %title-text;
         }
 
         &-text {
@@ -154,9 +141,9 @@ body {
 }
 
 .terms {
+    height: 1.38%;
     display: flex;
     justify-content: space-between;
-    height: 1.47%;
 
 
     &__item {
@@ -178,33 +165,23 @@ body {
     }
 }
 
-.image {
+.image-steampunk {
+    height: 3%;
     width: 100%;
-    height: 5%;
     display: flex;
     justify-content: center;
 
-
     &__img {
-
         height: 100%;
-
     }
 }
 
 .result {
-    height: 6%;
+    height: 4.7%;
 
     &__title {
         height: 10%;
-        color: $color-main;
-        font-family: $font-title;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 123%;
-        /* 49.2px */
-        letter-spacing: 1.2px;
+        @extend %title-text;
     }
 
     &__list {
@@ -216,32 +193,18 @@ body {
 
         &-item {
             @extend %main-text;
-
         }
-
-        li {
-            list-style-type: none;
-        }
-
-        li::before {
-            color: $color-title;
-            content: "•";
-            /* Сам маркер */
-            padding-right: 4%;
-            /* Расстояние от маркера до текста */
-        }
-
     }
 }
 
 .quote-first {
-    height: 2%;
+    height: 1.33%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../images/main/frame.png);
     background-repeat: no-repeat;
-    //background-size: cover;
+    background-size: 100%;
     background-position: center;
 
     &__text {
@@ -263,7 +226,7 @@ body {
 }
 
 .about {
-    height: 10%;
+    height: 7.16%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -348,22 +311,20 @@ body {
             width: 47%;
 
             .about__item {
-                .about__heart {
-                   
-                }
+                .about__heart {}
             }
         }
     }
 }
 
 .quote-second {
-    height: 2%;
+    height: 1.33%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(../images/main/frame.png);
     background-repeat: no-repeat;
-    //background-size: cover;
+    background-size: 100%;
     background-position: center;
 
     &__text {
@@ -493,7 +454,7 @@ body {
 }
 
 .questions {
-    height: 3.2%;
+    height: 2.93%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -556,13 +517,14 @@ body {
     }
 }
 
-.video {
-    height: 5%;
+.video-first {
+    height: 3.37%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
     &__title {
         color: $color-title;
         text-align: center;
@@ -575,11 +537,155 @@ body {
         margin-bottom: 60px;
     }
 
-   
-    iframe{
-        
+
+    iframe {
+
         border-radius: 20px;
+
+    }
+}
+
+.program {
+    height: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__content {
+        height: 73.8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &-title {
+            @extend %title-text;
+        }
+
+        &-list {
+            @extend %main-text;
+
+            .program__content-item {
+                @extend %main-text;
+
+                span {
+                    color: $color-title;
+                    font-family: $font-inscription;
+                    font-size: 40px;
+                    font-weight: 400;
+                    line-height: 233%;
+                    letter-spacing: 0%;
+                }
+            }
+        }
+    }
+
+    &__quote {
+        color: $color-title;
+        font-family: $font-title;
+        font-size: 41px;
+        font-weight: 400;
+        line-height: 117%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+}
+
+.methods {
+    height: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__header {
+        height: 43.64%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        &-content {
+            width: 39.15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10%;
+
+            .methods__header-title {
+                @extend %title-text;
+            }
+
+            .methods__header-text {
+                @extend %main-text;
+            }
+        }
+
+        &-image {
+            width: 47.2%;
+            .methods__header-img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__list {
+        width: 100%;
+        padding-left: 6%;
+        &-item {
+            @extend %main-text;
+margin-bottom: 3%;
+        }
+    }
+}
+
+.payment{
+    height: 8.43%;
+    width: 95.43%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    &_image{
         
+
+        height: 35.63%;
+        display: flex;
+        justify-items: flex-start;
+        align-items: end;
+        border-radius: 81px;
+    background-image: url(../images/main/three-guys.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+        &-title{
+            height: 19%;
+            width: 37.21%;
+            border-radius:  0px 59px 0px  0px ;
+            @extend %title-pink-big;
+
+background: rgb(255, 255, 255);
+        }
+    }
+    &__terms{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        &-item{
+            @extend %main-text;
+        }
+    }
+    &__quote{
+        height: 28%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        background-image: url(../images/main/frame-big.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+        @extend %quote-text;
     }
 }
 
