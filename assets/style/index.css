@@ -1,4 +1,30 @@
-@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.wrapper {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    width: 60vw;
+    height: 2600vh;
+  }
+}
 @font-face {
   font-family: "Russo One";
   src: url("../fonts/Russo_One/RussoOne-Regular.ttf");
@@ -17,106 +43,87 @@
   font-weight: normal;
   font-style: normal;
 }
-.payment__terms-item, .methods__list-item, .methods__header-content .methods__header-text, .program__content-list .program__content-item, .program__content-list, .about__content-text, .result__list-item, .terms__item-text, .greeting__content-text {
-  font-family: "Museo Sans Cyrl", sans-serif;
-  color: #000;
-  font-size: 40px;
+.header__dates {
+  color: #DF8CB0;
+  font-family: "Russo One", sans-serif;
   font-style: normal;
-  font-weight: 250;
+  font-weight: 400;
+  line-height: 113%;
+  text-transform: uppercase;
+  font-size: 150%;
+}
+
+.payment__limit .payment_limit-text, .payment__image-title, .lesson__title, .tariff_image-title, .header__title-second {
+  color: #DF8CB0;
+  font-family: "Russo One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113%;
+  text-transform: uppercase;
+  font-size: 400%;
+}
+
+.video-first__title, .about__image-alone .inscription__container .inscription__text {
+  color: #DF8CB0;
+  font-family: "Russo One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113%;
+  text-transform: uppercase;
+  font-size: 80%;
+  line-height: 123%;
+  letter-spacing: 3%;
+}
+
+.payment__list-item, .lesson__text, .tariff__terms-item, .methods__list-item, .methods__header-content .methods__header-text, .program__content-list .program__content-item, .program__content-list, .about__content-text, .result__list-item, .greeting__content-text {
+  color: #000;
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-style: normal;
+  font-weight: 200;
   line-height: 126%;
-  /* 50.4px */
   letter-spacing: 0.8px;
+  font-size: 150%;
+}
+
+.terms__item-text {
+  color: #000;
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 126%;
+  letter-spacing: 0.8px;
+  font-size: 120%;
 }
 
 .methods__header-content .methods__header-title, .program__content-title, .result__title, .greeting__content-title {
   color: #000;
   font-family: "Russo One", sans-serif;
-  font-size: 40px;
+  font-size: 180%;
   font-weight: 400;
   line-height: 123%;
   letter-spacing: 3%;
   text-align: left;
 }
 
-.payment__quote {
+.lesson__video, .tariff__quote, .quote-second__text, .about__image-alone .inscription__container .inscription__title, .quote-first__text {
   color: #DF8CB0;
   font-family: "Kosko Regular", sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: 8%;
   text-align: center;
-}
-
-.payment_image-title, .header__title-second {
-  color: #DF8CB0;
-  font-family: "Russo One", sans-serif;
-  font-size: 96px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 113%;
-  /* 108.48px */
-  letter-spacing: -2.88px;
-  text-transform: uppercase;
 }
 
 html {
   font-size: 100%;
 }
-@media screen and (max-width: 900px) {
-  html {
-    font-size: 95%;
-  }
-}
-@media screen and (max-width: 700px) {
-  html {
-    font-size: 90%;
-  }
-}
-@media screen and (max-width: 500px) {
-  html {
-    font-size: 85%;
-  }
-}
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 75%;
-  }
-}
 
 li {
-  list-style-type: none;
-}
-
-li::before {
-  color: #DF8CB0;
-  content: "•";
-  padding-right: 2%;
-  padding-top: 5px;
-  margin-bottom: -5px;
-  font-size: 60px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 21347px;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  line-height: 1;
+  list-style-image: url("../images/main/dot.png");
 }
 
 .header {
-  width: 41%;
   height: 2.83%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  width: 95.43%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,29 +133,16 @@ body {
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 1000px) {
-  .header {
-    width: 95%;
-  }
-}
 .header__dates {
   display: flex;
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  width: 25%;
+  width: 27.29%;
   height: 21.16%;
   border-radius: 0px 70px 0px 55px;
   background: #FFF;
   align-self: flex-end;
-  font-family: "Russo One", sans-serif;
-  color: #DF8CB0;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 113%;
-  /* 45.2px */
-  letter-spacing: -0.8px;
 }
 .header__dates-first {
   margin-right: 4px;
@@ -170,32 +164,26 @@ body {
   padding-top: 4%;
 }
 .header__title-first {
-  font-size: 64px;
+  font-size: 250%;
   font-family: "Kosko Regular", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 113%;
-  /* 72.32px */
-  letter-spacing: -6px;
   text-transform: uppercase;
 }
 .main {
-  border: 1px solid grey;
-  height: 20142px;
-  width: 41%;
+  height: 95.07%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-@media screen and (max-width: 1000px) {
-  .main {
-    width: 95%;
-  }
-}
 
 .greeting {
-  height: 3.05%;
+  border: 1px solid rgb(203, 221, 110);
+  height: 2.6%;
+  width: 95.43%;
   display: flex;
   justify-content: space-between;
 }
@@ -205,33 +193,44 @@ body {
   justify-content: end;
   width: 46.55%;
 }
+.greeting__content-title {
+  margin-bottom: 10%;
+}
 .greeting__image {
-  width: 44, 42%;
+  height: 100%;
+  width: 50%;
+}
+.greeting__image .greeting__img {
+  width: 100%;
 }
 
 .terms {
-  height: 1.38%;
+  border: 1px solid rgb(79, 125, 204);
+  height: 1.37%;
+  width: 95.43%;
   display: flex;
   justify-content: space-between;
 }
 .terms__item {
+  height: 100%;
+  width: 23.07%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22.66%;
   border-radius: 61px;
   border: 4px solid #DF8CB0;
 }
 .terms__item-text {
-  width: 70%;
-  font-size: 27px;
+  max-width: 80%;
+  max-height: 80%;
   letter-spacing: 0.54px;
   text-align: center;
 }
 
 .image-steampunk {
-  height: 3%;
-  width: 100%;
+  border: 1px solid rgb(129, 204, 79);
+  height: 2.55%;
+  width: 95.43%;
   display: flex;
   justify-content: center;
 }
@@ -240,7 +239,9 @@ body {
 }
 
 .result {
-  height: 4.7%;
+  border: 1px solid rgb(218, 144, 55);
+  height: 4.6%;
+  width: 95.43%;
 }
 .result__title {
   height: 10%;
@@ -252,8 +253,13 @@ body {
   justify-content: space-around;
   padding-left: 5%;
 }
+.result__list-item {
+  border: 1px solid rgb(55, 172, 218);
+}
+
 .quote-first {
-  height: 1.33%;
+  height: 1.32%;
+  width: 95.43%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,12 +271,8 @@ body {
 .quote-first__text {
   max-width: 865px;
   height: 70%;
-  padding-top: 2.5%;
-  color: #DF8CB0;
-  text-align: center;
-  font-family: "Kosko Regular", sans-serif;
-  font-size: 24px;
-  font-style: normal;
+  padding-top: 2.9%;
+  font-size: 95%;
   font-weight: 400;
   line-height: 233%;
   /* 55.92px */
@@ -279,30 +281,27 @@ body {
 }
 
 .about {
-  height: 7.16%;
+  border: 1px solid rgb(218, 55, 69);
+  height: 7.11%;
+  width: 95.43%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .about__image {
-  height: 617px;
+  border: 1px solid rgb(58, 218, 55);
+  height: 35%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.about__image-child {
-  width: 48%;
-  background-image: url(../images/main/author-with-child.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: 100%;
-  border-radius: 68px;
-}
 .about__image-alone {
-  display: flex;
-  justify-content: end;
-  align-items: end;
   width: 48%;
+  border: 1px solid rgb(16, 77, 15);
   height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
   background-image: url(../images/main/author.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -314,39 +313,34 @@ body {
   height: 25%;
   display: flex;
   flex-direction: column;
-  border-radius: 65px 0px 59px 0px;
+  border-radius: 0px 65px 0px 0px;
   background: #FFF;
 }
 .about__image-alone .inscription__container .inscription__title {
-  height: 50%;
   align-self: flex-start;
-  color: #DF8CB0;
-  font-family: "Kosko Regular", sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 200%;
   line-height: 142%;
   /* 90.88px */
   transform: rotate(-6.01deg);
   padding-left: 12%;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 .about__image-alone .inscription__container .inscription__text {
-  height: 50%;
   align-self: end;
-  width: 96%;
-  color: #DF8CB0;
-  font-family: "Russo One", sans-serif;
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 123%;
-  /* 31.98px */
   letter-spacing: 0.78px;
   text-align: right;
+  margin-right: 6%;
+}
+.about__image-child {
+  width: 48%;
+  background-image: url(../images/main/author-with-child.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 68px;
 }
 .about__content {
-  height: 55%;
+  height: 60%;
   display: flex;
   justify-content: space-between;
 }
@@ -358,6 +352,7 @@ body {
 }
 .quote-second {
   height: 1.33%;
+  width: 95.43%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,14 +365,9 @@ body {
   max-width: 865px;
   height: 70%;
   padding-top: 2.5%;
-  color: #DF8CB0;
-  text-align: center;
-  font-family: "Kosko Regular", sans-serif;
-  font-size: 24px;
-  font-style: normal;
+  font-size: 100%;
   font-weight: 400;
   line-height: 233%;
-  /* 55.92px */
   letter-spacing: 4.08px;
   text-transform: uppercase;
 }
@@ -468,75 +458,91 @@ body {
 }
 
 .questions {
+  border: 1px solid rgb(49, 88, 118);
   height: 2.93%;
-  width: 100%;
+  width: 95.43%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .questions__first {
+  height: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
 }
 .questions__first-content {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 30%;
+  margin-right: 3%;
 }
 .questions__first-content .questions__text {
   color: #000;
   font-family: "Kosko Regular", sans-serif;
-  font-size: 32px;
+  font-size: 120%;
   font-style: normal;
   font-weight: 400;
   line-height: 117%;
-  /* 37.44px */
   letter-spacing: 0.96px;
   text-align: center;
 }
+.questions__first-image {
+  height: 80%;
+}
+.questions__first-image .questions__first-img {
+  height: 100%;
+}
 .questions__second {
+  height: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+}
+.questions__second-image {
+  height: 80%;
+}
+.questions__second-image .questions__second-img {
+  height: 100%;
 }
 .questions__second-content {
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 40%;
+  padding-left: 3%;
 }
 .questions__second-content .questions__text {
   color: #000;
   font-family: "Kosko Regular", sans-serif;
-  font-size: 32px;
+  font-size: 130%;
   font-style: normal;
   font-weight: 400;
   line-height: 117%;
-  /* 37.44px */
   letter-spacing: 0.96px;
   text-align: center;
 }
 .video-first {
-  height: 3.37%;
-  width: 100%;
+  border: 1px solid rgb(123, 87, 15);
+  height: 3.35%;
+  width: 75%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .video-first__title {
-  color: #DF8CB0;
-  text-align: center;
-  font-family: "Russo One", sans-serif;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 123%;
-  /* 39.36px */
-  margin-bottom: 60px;
+  font-size: 100%;
+}
+.video-first__content {
+  width: 100%;
+  height: 80%;
 }
 .video-first iframe {
   border-radius: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .program {
@@ -603,14 +609,14 @@ body {
   margin-bottom: 3%;
 }
 
-.payment {
+.tariff {
   height: 8.43%;
   width: 95.43%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.payment_image {
+.tariff_image {
   height: 35.63%;
   display: flex;
   justify-items: flex-start;
@@ -621,20 +627,20 @@ body {
   background-size: cover;
   background-position: center;
 }
-.payment_image-title {
+.tariff_image-title {
   height: 19%;
   width: 37.21%;
   border-radius: 0px 59px 0px 0px;
   background: rgb(255, 255, 255);
 }
-.payment__terms {
+.tariff__terms {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
 }
-.payment__quote {
+.tariff__quote {
   height: 28%;
   width: 100%;
   display: flex;
@@ -647,6 +653,61 @@ body {
   background-position: center;
 }
 
+.lesson {
+  height: 6.16%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.lesson__video {
+  height: 45%;
+  width: 76.05%;
+}
+
+.payment {
+  height: 14.25%;
+  width: 95.43%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.payment__image {
+  height: 21.08%;
+  width: 100%;
+  display: flex;
+  justify-items: flex-start;
+  align-items: end;
+  border-radius: 81px;
+  background-image: url(../images/main/man-money.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.payment__image-title {
+  height: 19%;
+  width: 37.21%;
+  border-radius: 0px 59px 0px 0px;
+  background: rgb(255, 255, 255);
+}
+.payment__limit {
+  width: 64.26%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.payment__limit-emoji {
+  width: 113px;
+  height: 105px;
+}
+.payment__limit #fire-one {
+  align-self: flex-start;
+}
+.payment__limit #fire-two {
+  align-self: flex-end;
+}
 .footer {
   display: flex;
   height: 5%;

@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div class="wrapper">
     <header class="header">
         <div class="header__dates">
             <div class="header__dates-first">старт 26.02 </div>
@@ -82,7 +83,7 @@
         </div>
 
         <div class="image-steampunk">
-            <img src="./assets/images/main/girl-steampunk.png" alt="steampunk girl" class="image__img">
+            <img src="./assets/images/main/girl-steampunk.png" alt="steampunk girl" class="image-steampunk__img">
         </div>
 
         <div class="result">
@@ -112,13 +113,17 @@
 
         <div class="about">
             <div class="about__image">
-                <div class="about__image-child"></div>
                 <div class="about__image-alone inscription">
                     <div class="inscription__container">
                         <div class="inscription__title">Это я</div>
-                        <div class="inscription__text">ваш преподаватель и проводник в мир Midjourney</div>
+                        <div class="inscription__text">
+                            <p>ваш преподаватель</p>
+                            <p>и проводник в мир Midjourney</p> 
+                        </div>
                     </div>
                 </div>
+                <div class="about__image-child"></div>
+                
 
             </div>
             <div class="about__content">
@@ -252,10 +257,10 @@
 
         <div class="video-first">
             <div class="video-first__title">
-                отвечаю на эти вопросы в видео
+                посмотри это видео, если думаешь так же
             </div>
             <div class="video-first__content">
-                <iframe width="1100" height="700" src="https://www.youtube.com/embed/pdd9b47x67M?si=v1-hn8fYBmVDB86B"
+                <iframe src="https://www.youtube.com/embed/pdd9b47x67M?si=v1-hn8fYBmVDB86B"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -333,21 +338,21 @@
             </ul>
         </div>
 
-        <div class="payment">
-            <div class="payment_image">
-                <div class="payment_image-title">тарифы</div>
+        <div class="tariff">
+            <div class="tariff_image">
+                <div class="tariff_image-title">тарифы</div>
             </div>
-            <div class="payment__terms">
-                <div class="payment__terms-item">
+            <div class="tariff__terms">
+                <div class="tariff__terms-item">
                     <p>Единый тариф на групповое обучение </p>
                     <p>с обратной связью! </p>
                 </div>
-                <div class="payment__terms-item">
+                <div class="tariff__terms-item">
                     <p>Я лично проверю каждую вашу работу, буду на связи</p>
                     <p> в групповом чате для ответов на вопросы и поддержки.</p>
                 </div>
             </div>
-            <div class="payment__quote">
+            <div class="tariff__quote">
                 <p>Первый поток — важное для меня событие.</p>
                 <p> Я хочу быть максимально вовлечена в ваш результат,</p>
                 <p>видеть ваши радости, успехи и трудности. Я буду на</p>
@@ -356,6 +361,63 @@
                 <p>студентами</p>
 
             </div>
+        </div>
+
+        <div class="lesson">
+            <div class="lesson__title">сомневаешься?</div>
+            <div class="lesson__text">
+                <p>стоит ли мой курс твоих денег</p>
+                <p>и времени? Не хочешь рисковать, не зная, как и что</p>
+                <p>я объясняю? Прекрасно тебя понимаю! И поэтому даю</p>
+                <p>доступ к просмотру одного урока с курса прямо сейчас.</p>
+                <p>Убедись, что я подхожу тебе как проводник в мир</p>
+                <div class="lesson__text-midjourney">Midjourney</div>
+            </div>
+            <div class="lesson__video">
+                <iframe width="1100" height="700" src="https://www.youtube.com/embed/pdd9b47x67M?si=v1-hn8fYBmVDB86B"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="payment">
+            <div class="payment__image">
+                <div class="payment__image-title">стоимость</div>
+            </div>
+            <div class="payment__limit">
+                <img src="./assets/images/main/emoji-fire.png" alt="fire" class="payment__limit-emoji" id="fire-one">
+                <div class="payment_limit-text">всего 15 мест</div>
+                <img src="./assets/images/main/emoji-fire.png" alt="fire" class="payment__limit-emoji" id="fire-two">
+            </div>
+            <ul class="payment_list">
+                <li class="payment__list-item"> 5 недель обучения с обратной связью 
+                    <p>на протяжении всего курса</p>
+                </li>
+                <li class="payment__list-item"> Вечный доступ к материалам курса после 
+                    <p>его окончания</p>
+                </li>
+                <li class="payment__list-item"> Фишки и навыки, о которых не рассказывают 
+                    <p>на русскоязычных ресурсах</p>
+                </li>
+                <li class="payment__list-item">Полное понимание, как применить свои навыки 
+                    <p>после курса</p>
+                </li>
+                <li class="payment__list-item">Портфолио, которое покорит любого клиента
+                </li>
+                <li class="payment__list-item">Комьюнити единомышленников из студентов курса
+                </li>
+                <li class="payment__list-item">Сертификат об окончании курса
+                </li>
+            </ul>
+            <div class="payment__price">
+                <div class="payment__price-wrapper">
+                    <img src="./assets/images/main/emoji-fire.png" alt="fire" class="payment__price-emoji" id="fire-three">
+                    <div class="payment__price-sum">12 990 р</div>
+                    <img src="./assets/images/main/emoji-finger.png" alt="fire" class="payment__price-emoji" id="finger">
+                </div>
+            </div>
+            <div class="payment__button">оплатить</div>
         </div>
 
 
@@ -371,6 +433,8 @@
     <footer class=" footer">
         footer
     </footer>
+
+</div>
 </body>
 
 </html>

@@ -1,35 +1,19 @@
 @import "./template";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 21347px; //временно! м.б поставить 400vh
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
 .header {
-    width: 41%;
     height: 2.83%;
-    margin-top: 5%; //временная мера
-    margin-bottom: 5%; //временная мера
+    width: $main-with;
+    // margin-top: 5%; //временная мера
+    // margin-bottom: 5%; //временная мера
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
 
-    @media screen and (max-width: 1000px) {
-        //временная точка
-        width: 95%;
-    }
+    // @media screen and (max-width: 1000px) {
+    //     //временная точка
+    //     width: 95%;
+    // }
 
     border-radius: 81px;
     background-image: url(../images/header/girl-glass.png);
@@ -42,19 +26,12 @@ body {
         flex-direction: column;
         align-items: end;
         justify-content: center;
-        width: 25%;
+        width: 27.29%;
         height: 21.16%;
         border-radius: 0px 70px 0px 55px;
         background: #FFF;
         align-self: flex-end;
-        font-family: $font-title;
-        color: $color-title;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 113%;
-        /* 45.2px */
-        letter-spacing: -0.8px;
+        @extend %title-pink;
 
         &-first {
             margin-right: 4px;
@@ -81,14 +58,11 @@ body {
 
 
         &-first {
-            font-size: 64px;
-            // font-family: "Amatic SC", sans-serif; //kosko не встает
+            font-size: 250%;
             font-family: $font-inscription;
             font-style: normal;
             font-weight: 400;
             line-height: 113%;
-            /* 72.32px */
-            letter-spacing: -6px;
             text-transform: uppercase;
         }
 
@@ -99,22 +73,18 @@ body {
 }
 
 .main {
-    border: 1px solid grey;
-    height: 20142px;
-    width: 41%;
+    height: 95.07%;
+    width: 100%; //блоки внутри разные, поэтому увеличила до 100%
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
-    @media screen and (max-width: 1000px) {
-        //временная точка
-        width: 95%;
-    }
 }
 
 .greeting {
-    height: 3.05%;
+    border: 1px solid rgb(203, 221, 110);
+    height: 2.6%;
+    width: $main-with;
     display: flex;
     justify-content: space-between;
 
@@ -126,6 +96,7 @@ body {
 
         &-title {
             @extend %title-text;
+            margin-bottom: 10%
         }
 
         &-text {
@@ -134,30 +105,36 @@ body {
     }
 
     &__image {
-        width: 44, 42%;
+        height: 100%;
+        width: 50%;
 
-        // &__img {}
+        .greeting__img {
+            width: 100%;
+        }
     }
 }
 
 .terms {
-    height: 1.38%;
+    border: 1px solid rgb(79, 125, 204);
+    height: 1.37%;
+    width: $main-with;
     display: flex;
     justify-content: space-between;
 
 
     &__item {
+        height: 100%;
+        width: 23.07%;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 22.66%;
         border-radius: 61px;
-        border: 4px solid #DF8CB0;
+        border: 4px solid $color-title;
 
         &-text {
-            width: 70%;
-            @extend %main-text;
-            font-size: 27px;
+            max-width: 80%;
+            max-height: 80%;
+            @extend %main-text-small;
             letter-spacing: 0.54px;
             text-align: center;
 
@@ -166,8 +143,9 @@ body {
 }
 
 .image-steampunk {
-    height: 3%;
-    width: 100%;
+    border: 1px solid rgb(129, 204, 79);
+    height: 2.55%;
+    width: $main-with;
     display: flex;
     justify-content: center;
 
@@ -177,7 +155,9 @@ body {
 }
 
 .result {
-    height: 4.7%;
+    border: 1px solid rgb(218, 144, 55);
+    height: 4.6%;
+    width: $main-with;
 
     &__title {
         height: 10%;
@@ -191,14 +171,17 @@ body {
         justify-content: space-around;
         padding-left: 5%;
 
+
         &-item {
+            border: 1px solid rgb(55, 172, 218);
             @extend %main-text;
         }
     }
 }
 
 .quote-first {
-    height: 1.33%;
+    height: 1.32%;
+    width: $main-with;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,13 +193,9 @@ body {
     &__text {
         max-width: 865px;
         height: 70%;
-        padding-top: 2.5%;
-        color: $color-title;
-
-        text-align: center;
-        font-family: $font-inscription;
-        font-size: 24px;
-        font-style: normal;
+        padding-top: 2.9%;
+        @extend %quote-text;
+        font-size: 95%;
         font-weight: 400;
         line-height: 233%;
         /* 55.92px */
@@ -226,31 +205,27 @@ body {
 }
 
 .about {
-    height: 7.16%;
+    border: 1px solid rgb(218, 55, 69);
+    height: 7.11%;
+    width: $main-with;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     &__image {
-        height: 617px;
+        border: 1px solid rgb(58, 218, 55);
+        height: 35%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
 
-        &-child {
-            width: 48%;
-            background-image: url(../images/main/author-with-child.png);
-            background-repeat: no-repeat;
-            background-position-x: center;
-            background-size: 100%;
-            border-radius: 68px;
-        }
-
         &-alone {
-            display: flex;
-            justify-content: end;
-            align-items: end;
             width: 48%;
+            border: 1px solid rgb(16, 77, 15);
             height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: end;
             background-image: url(../images/main/author.png);
             background-repeat: no-repeat;
             background-position: center;
@@ -262,44 +237,44 @@ body {
                 height: 25%;
                 display: flex;
                 flex-direction: column;
-                border-radius: 65px 0px 59px 0px;
+                border-radius: 0px 65px 0px 0px;
                 background: #FFF;
 
                 .inscription__title {
-                    height: 50%;
+                    @extend %quote-text;
                     align-self: flex-start;
-                    color: $color-title;
-                    font-family: $font-inscription;
-                    font-size: 64px;
-                    font-style: normal;
-                    font-weight: 400;
+                    font-size: 200%;
                     line-height: 142%;
                     /* 90.88px */
                     transform: rotate(-6.01deg);
                     padding-left: 12%;
-                    padding-top: 5%;
+                    padding-top: 3%;
                 }
 
                 .inscription__text {
-                    height: 50%;
+                    // height: 50%;
+                    // width: 96%;
                     align-self: end;
-                    width: 96%;
-                    color: $color-title;
-                    font-family: $font-title;
-                    font-size: 26px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 123%;
-                    /* 31.98px */
+                    @extend %title-pink-small;
                     letter-spacing: 0.78px;
                     text-align: right;
+                    margin-right: 6%;
                 }
             }
+        }
+
+        &-child {
+            width: 48%;
+            background-image: url(../images/main/author-with-child.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            border-radius: 68px;
         }
     }
 
     &__content {
-        height: 55%;
+        height: 60%;
         display: flex;
         justify-content: space-between;
 
@@ -319,6 +294,7 @@ body {
 
 .quote-second {
     height: 1.33%;
+    width: $main-with;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,15 +307,10 @@ body {
         max-width: 865px;
         height: 70%;
         padding-top: 2.5%;
-        color: $color-title;
-
-        text-align: center;
-        font-family: $font-inscription;
-        font-size: 24px;
-        font-style: normal;
+        @extend %quote-text;
+        font-size: 100%;
         font-weight: 400;
         line-height: 233%;
-        /* 55.92px */
         letter-spacing: 4.08px;
         text-transform: uppercase;
     }
@@ -454,30 +425,34 @@ body {
 }
 
 .questions {
+    border: 1px solid rgb(49, 88, 118);
     height: 2.93%;
-    width: 100%;
+    width: $main-with;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     &__first {
+        height: 50%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+        align-items: center;
 
         &-content {
+            width: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left: 30%;
+            margin-right: 3%;
+
 
             .questions__text {
                 color: $color-main;
                 font-family: $font-inscription;
-                font-size: 32px;
+                font-size: 120%;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 117%;
-                /* 37.44px */
                 letter-spacing: 0.96px;
                 text-align: center;
             }
@@ -485,29 +460,44 @@ body {
             .questions__line {}
         }
 
-        &-image {}
+        &-image {
+            height: 80%;
+
+            .questions__first-img {
+                height: 100%;
+            }
+
+        }
     }
 
     &__second {
+        height: 50%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: center;
 
-        &-image {}
+        &-image {
+            height: 80%;
+
+            .questions__second-img {
+                height: 100%;
+            }
+        }
 
         &-content {
+            width: 40%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-right: 40%;
+            padding-left: 3%;
 
             .questions__text {
                 color: $color-main;
                 font-family: $font-inscription;
-                font-size: 32px;
+                font-size: 130%;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 117%;
-                /* 37.44px */
                 letter-spacing: 0.96px;
                 text-align: center;
             }
@@ -518,29 +508,28 @@ body {
 }
 
 .video-first {
-    height: 3.37%;
-    width: 100%;
+    border: 1px solid rgb(123, 87, 15);
+    height: 3.35%;
+    width: 75%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     &__title {
-        color: $color-title;
-        text-align: center;
-        font-family: $font-title;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 123%;
-        /* 39.36px */
-        margin-bottom: 60px;
+        @extend %title-pink-small;
+        font-size: 100%;
+    }
+    &__content{
+        width:100%;
+        height:80%
     }
 
 
     iframe {
-
         border-radius: 20px;
+        width:100%;
+        height: 100%
 
     }
 }
@@ -621,6 +610,7 @@ body {
 
         &-image {
             width: 47.2%;
+
             .methods__header-img {
                 width: 100%;
             }
@@ -630,51 +620,54 @@ body {
     &__list {
         width: 100%;
         padding-left: 6%;
+
         &-item {
             @extend %main-text;
-margin-bottom: 3%;
+            margin-bottom: 3%;
         }
     }
 }
 
-.payment{
+.tariff {
     height: 8.43%;
     width: 95.43%;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
-    &_image{
-        
+    justify-content: space-between;
 
+    &_image {
         height: 35.63%;
         display: flex;
         justify-items: flex-start;
         align-items: end;
         border-radius: 81px;
-    background-image: url(../images/main/three-guys.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-        &-title{
+        background-image: url(../images/main/three-guys.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &-title {
             height: 19%;
             width: 37.21%;
-            border-radius:  0px 59px 0px  0px ;
+            border-radius: 0px 59px 0px 0px;
             @extend %title-pink-big;
-
-background: rgb(255, 255, 255);
+            background: rgb(255, 255, 255);
         }
     }
-    &__terms{
+
+    &__terms {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         text-align: center;
-        &-item{
+
+        &-item {
             @extend %main-text;
         }
     }
-    &__quote{
+
+    &__quote {
         height: 28%;
         width: 100%;
         display: flex;
@@ -682,11 +675,105 @@ background: rgb(255, 255, 255);
         justify-content: center;
         align-self: center;
         background-image: url(../images/main/frame-big.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
         @extend %quote-text;
     }
+}
+
+.lesson {
+    height: 6.16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        @extend %title-pink-big;
+    }
+
+    &__text {
+        @extend %main-text;
+    }
+
+    &__video {
+        height: 45%;
+        width: 76.05%;
+        @extend %quote-text;
+    }
+}
+
+.payment {
+    height: 14.25%;
+    width: 95.43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__image {
+        height: 21.08%;
+        width: 100%;
+        display: flex;
+        justify-items: flex-start;
+        align-items: end;
+        border-radius: 81px;
+        background-image: url(../images/main/man-money.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &-title {
+            height: 19%;
+            width: 37.21%;
+            border-radius: 0px 59px 0px 0px;
+            @extend %title-pink-big;
+            background: rgb(255, 255, 255);
+        }
+    }
+
+    &__limit {
+        width: 64.26%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-emoji {
+            width: 113px;
+            height: 105px;
+        }
+
+
+        .payment_limit-text {
+            @extend %title-pink-big;
+        }
+
+        #fire-one {
+            align-self: flex-start
+        }
+
+        #fire-two {
+            align-self: flex-end
+        }
+    }
+
+    &__list {
+        &-item {
+            @extend %main-text;
+        }
+    }
+
+    &__price {
+        &-wrapper {
+            .payment__price-emoji {}
+
+            .payment__price-sum {}
+        }
+    }
+
+    &__button {}
 }
 
 
