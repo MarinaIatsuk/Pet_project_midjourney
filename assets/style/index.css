@@ -21,8 +21,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .wrapper {
-    width: 60vw;
-    height: 2600vh;
+    width: 50vw;
+    height: 1750vh;
   }
 }
 @font-face {
@@ -43,46 +43,46 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.header__dates {
+.program__quote, .header__dates {
   color: #DF8CB0;
   font-family: "Russo One", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 113%;
   text-transform: uppercase;
-  font-size: 150%;
+  font-size: 130%;
 }
 
-.payment__limit .payment_limit-text, .payment__image-title, .lesson__title, .tariff_image-title, .header__title-second {
+.payment__button-text, .payment__price-wrapper .payment__price-sum, .payment__limit .payment_limit-text, .payment__image-title .payment__image-text, .lesson__title, .tariff_image-title .tariff_image-text, .header__title-second {
   color: #DF8CB0;
   font-family: "Russo One", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 113%;
   text-transform: uppercase;
-  font-size: 400%;
+  font-size: 320%;
 }
 
-.video-first__title, .about__image-alone .inscription__container .inscription__text {
+.video-first__title, .gallery__second_row .gallery__text .gallery__txt, .about__image-alone .inscription__container .inscription__text {
   color: #DF8CB0;
   font-family: "Russo One", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 113%;
   text-transform: uppercase;
-  font-size: 80%;
+  font-size: 65%;
   line-height: 123%;
   letter-spacing: 3%;
 }
 
-.payment__list-item, .lesson__text, .tariff__terms-item, .methods__list-item, .methods__header-content .methods__header-text, .program__content-list .program__content-item, .program__content-list, .about__content-text, .result__list-item, .greeting__content-text {
+.payment__list-item, .lesson__text, .tariff__terms-item, .methods__list-item, .methods__header-content .methods__header-text, .program__content-list, .about__content-text, .result__list-item, .greeting__content-text {
   color: #000;
   font-family: "Museo Sans Cyrl", sans-serif;
   font-style: normal;
   font-weight: 200;
   line-height: 126%;
   letter-spacing: 0.8px;
-  font-size: 150%;
+  font-size: 130%;
 }
 
 .terms__item-text {
@@ -92,20 +92,20 @@ body {
   font-weight: 200;
   line-height: 126%;
   letter-spacing: 0.8px;
-  font-size: 120%;
+  font-size: 100%;
 }
 
-.methods__header-content .methods__header-title, .program__content-title, .result__title, .greeting__content-title {
+.footer__contacts-title, .footer__profiles-title, .methods__header-content .methods__header-title, .program__content-title, .result__title, .greeting__content-title {
   color: #000;
   font-family: "Russo One", sans-serif;
-  font-size: 180%;
+  font-size: 160%;
   font-weight: 400;
   line-height: 123%;
   letter-spacing: 3%;
   text-align: left;
 }
 
-.lesson__video, .tariff__quote, .quote-second__text, .about__image-alone .inscription__container .inscription__title, .quote-first__text {
+.lesson__video, .lesson__text-midjourney, .tariff__quote-wrapper .tariff__quote-text, .quote-second__text, .about__image-alone .inscription__container .inscription__title, .quote-first__text {
   color: #DF8CB0;
   font-family: "Kosko Regular", sans-serif;
   text-align: center;
@@ -117,12 +117,13 @@ html {
 }
 
 li {
-  line-height: 1;
+  list-style: none;
   list-style-image: url("../images/main/dot.png");
+  padding-right: 5%;
 }
 
 .header {
-  height: 2.83%;
+  height: 3%;
   width: 95.43%;
   display: flex;
   flex-direction: column;
@@ -182,7 +183,7 @@ li {
 
 .greeting {
   border: 1px solid rgb(203, 221, 110);
-  height: 2.6%;
+  height: 3.15%;
   width: 95.43%;
   display: flex;
   justify-content: space-between;
@@ -217,8 +218,8 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 61px;
-  border: 4px solid #DF8CB0;
+  border-radius: 40px;
+  border: 3px solid #DF8CB0;
 }
 .terms__item-text {
   max-width: 80%;
@@ -229,7 +230,7 @@ li {
 
 .image-steampunk {
   border: 1px solid rgb(129, 204, 79);
-  height: 2.55%;
+  height: 3.05%;
   width: 95.43%;
   display: flex;
   justify-content: center;
@@ -258,7 +259,7 @@ li {
 }
 
 .quote-first {
-  height: 1.32%;
+  height: 1.8%;
   width: 95.43%;
   display: flex;
   justify-content: center;
@@ -271,8 +272,8 @@ li {
 .quote-first__text {
   max-width: 865px;
   height: 70%;
-  padding-top: 2.9%;
-  font-size: 95%;
+  padding-top: 4.5%;
+  font-size: 80%;
   font-weight: 400;
   line-height: 233%;
   /* 55.92px */
@@ -282,7 +283,7 @@ li {
 
 .about {
   border: 1px solid rgb(218, 55, 69);
-  height: 7.11%;
+  height: 8%;
   width: 95.43%;
   display: flex;
   flex-direction: column;
@@ -290,7 +291,7 @@ li {
 }
 .about__image {
   border: 1px solid rgb(58, 218, 55);
-  height: 35%;
+  height: 37%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -340,7 +341,7 @@ li {
   border-radius: 68px;
 }
 .about__content {
-  height: 60%;
+  height: 55%;
   display: flex;
   justify-content: space-between;
 }
@@ -358,108 +359,119 @@ li {
   align-items: center;
   background-image: url(../images/main/frame.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 90%;
   background-position: center;
 }
 .quote-second__text {
-  max-width: 865px;
-  height: 70%;
-  padding-top: 2.5%;
-  font-size: 100%;
+  font-size: 90%;
   font-weight: 400;
-  line-height: 233%;
   letter-spacing: 4.08px;
   text-transform: uppercase;
 }
 
 .gallery {
-  max-height: 2786px;
+  border: 1px solid rgb(103, 224, 103);
+  height: 13.92%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  justify-content: space-between;
 }
 .gallery__first_row {
+  height: 22%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.gallery__first_row #tarantino {
+  width: 31.94%;
+}
+.gallery__first_row #girl_wolf {
+  width: 38.14%;
+}
+.gallery__first_row #girl_mushrooms {
+  width: 24.19%;
+  height: 122.88%;
 }
 .gallery__second_row {
+  height: 20%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.gallery__second_row #girl_blue_flowers {
+  height: 145.63%;
+  width: 31.94%;
+  margin-top: -10.5%;
+}
+.gallery__second_row .gallery__text {
+  border: 1px solid rgb(192, 123, 222);
+  width: 38.14%;
+  height: 137.1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -10.5%;
+}
+.gallery__second_row .gallery__text #cocktail {
+  width: 100%;
+}
+.gallery__second_row .gallery__text .gallery__txt {
+  font-size: 80%;
+  text-align: center;
+}
+.gallery__second_row #girl_orange_flowers {
+  height: 114%;
+  width: 24.19%;
+  margin-top: 1%;
 }
 .gallery__third_row {
+  border: 1px solid rgb(41, 66, 116);
+  height: 20%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.gallery__third_row #girl_bear {
+  height: 114.29%;
+  width: 31.94%;
+  margin-top: -1.5%;
+}
+.gallery__third_row #girl_robo_costume {
+  height: 125.7%;
+  width: 38.14%;
+  margin-top: -3.5%;
+}
+.gallery__third_row #water_channel {
+  height: 119%;
+  width: 24.19%;
+  margin-top: -3.5%;
 }
 .gallery__fourth_row {
+  height: 20%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.gallery .gallery__image .gallery__text {
-  color: #DF8CB0;
-  text-align: center;
-  font-family: "Russo One", sans-serif;
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 123%;
-  /* 31.98px */
-  letter-spacing: 0.78px;
+.gallery__fourth_row #batman {
+  height: 114.29%;
+  width: 31.94%;
+  margin-top: -6%;
 }
-.gallery .gallery__image .gallery__text .gallery__txt {
-  max-width: 505px;
-  padding-top: 5%;
+.gallery__fourth_row #rabbit {
+  height: 107.227%;
+  width: 38.14%;
+  margin-top: -3%;
 }
-.gallery .gallery__image #tarantino {
-  height: 612px;
-}
-.gallery .gallery__image #girl_wolf {
-  height: 612px;
-}
-.gallery .gallery__image #girl_mushrooms {
-  height: 752px;
-}
-.gallery .gallery__image #girl_blue_flowers {
-  height: 804px;
-  margin-top: -130px;
-}
-.gallery .gallery__image #cocktail {
-  height: 618px;
-  margin-top: -130px;
-}
-.gallery .gallery__image #girl_orange_flowers {
-  height: 629px;
-}
-.gallery .gallery__image #girl_bear {
-  height: 631px;
-}
-.gallery .gallery__image #girl_robo_costume {
-  height: 694px;
-  margin-top: -30px;
-}
-.gallery .gallery__image #water_channel {
-  height: 657px;
-  margin-top: -30px;
-}
-.gallery .gallery__image #batman {
-  height: 631px;
-  margin-top: -38px;
-}
-.gallery .gallery__image #rabbit {
-  height: 592px;
-}
-.gallery .gallery__image #girl_blue_hair {
-  height: 627px;
-  margin-top: -35px;
+.gallery__fourth_row #girl_blue_hair {
+  height: 113.57%;
+  width: 24.19%;
+  margin-top: -5.9%;
 }
 
 .questions {
   border: 1px solid rgb(49, 88, 118);
-  height: 2.93%;
+  height: 4%;
   width: 95.43%;
   display: flex;
   flex-direction: column;
@@ -476,17 +488,22 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 3%;
+  padding-top: 5%;
 }
 .questions__first-content .questions__text {
   color: #000;
   font-family: "Kosko Regular", sans-serif;
-  font-size: 120%;
+  font-size: 100%;
   font-style: normal;
   font-weight: 400;
   line-height: 117%;
   letter-spacing: 0.96px;
   text-align: center;
+}
+.questions__first-content .questions__line {
+  padding-top: 5%;
+  margin-bottom: 10%;
+  width: 100%;
 }
 .questions__first-image {
   height: 80%;
@@ -511,18 +528,22 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 3%;
 }
 .questions__second-content .questions__text {
   color: #000;
   font-family: "Kosko Regular", sans-serif;
-  font-size: 130%;
+  font-size: 100%;
   font-style: normal;
   font-weight: 400;
   line-height: 117%;
   letter-spacing: 0.96px;
   text-align: center;
 }
+.questions__second-content .questions__line {
+  padding-top: 10%;
+  margin-bottom: 13%;
+}
+
 .video-first {
   border: 1px solid rgb(123, 87, 15);
   height: 3.35%;
@@ -545,11 +566,24 @@ li {
   height: 100%;
 }
 
+.image-bears {
+  border: 1px solid rgb(129, 204, 79);
+  height: 3.07%;
+  width: 95.43%;
+  display: flex;
+  justify-content: center;
+}
+.image-bears .image__img {
+  height: 100%;
+}
+
 .program {
-  height: 6%;
+  border: 1px solid rgb(207, 83, 207);
+  height: 7%;
+  width: 95.43%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .program__content {
   height: 73.8%;
@@ -561,29 +595,25 @@ li {
 .program__content-list .program__content-item span {
   color: #DF8CB0;
   font-family: "Kosko Regular", sans-serif;
-  font-size: 40px;
+  font-size: 100%;
   font-weight: 400;
   line-height: 233%;
   letter-spacing: 0%;
 }
 .program__quote {
-  color: #DF8CB0;
-  font-family: "Russo One", sans-serif;
-  font-size: 41px;
-  font-weight: 400;
-  line-height: 117%;
-  letter-spacing: 0%;
   text-align: center;
 }
 
 .methods {
+  border: 1px solid rgb(141, 41, 163);
   height: 7%;
+  width: 95.43%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .methods__header {
-  height: 43.64%;
+  height: 43.9%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -596,7 +626,8 @@ li {
   gap: 10%;
 }
 .methods__header-image {
-  width: 47.2%;
+  height: 100%;
+  width: 50%;
 }
 .methods__header-image .methods__header-img {
   width: 100%;
@@ -606,21 +637,25 @@ li {
   padding-left: 6%;
 }
 .methods__list-item {
+  font-size: 130%;
   margin-bottom: 3%;
 }
 
 .tariff {
-  height: 8.43%;
+  border: 1px solid rgb(53, 163, 41);
+  height: 9%;
   width: 95.43%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .tariff_image {
-  height: 35.63%;
+  height: 35.86%;
+  width: 100%;
   display: flex;
   justify-items: flex-start;
-  align-items: end;
+  align-items: flex-end;
   border-radius: 81px;
   background-image: url(../images/main/three-guys.png);
   background-repeat: no-repeat;
@@ -628,12 +663,15 @@ li {
   background-position: center;
 }
 .tariff_image-title {
-  height: 19%;
+  height: 20%;
   width: 37.21%;
+  display: flex;
+  align-items: end;
   border-radius: 0px 59px 0px 0px;
   background: rgb(255, 255, 255);
 }
 .tariff__terms {
+  flex-grow: 0.4;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -641,33 +679,50 @@ li {
   text-align: center;
 }
 .tariff__quote {
-  height: 28%;
+  height: 30%;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-self: center;
+  align-items: center;
+}
+.tariff__quote-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(../images/main/frame-big.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 90%;
   background-position: center;
+}
+.tariff__quote-wrapper .tariff__quote-text {
+  font-size: 160%;
 }
 
 .lesson {
-  height: 6.16%;
+  border: 1px solid rgb(130, 41, 163);
+  height: 5.6%;
+  width: 95.43%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
 }
 .lesson__video {
-  height: 45%;
-  width: 76.05%;
+  border: 1px solid rgb(22, 11, 27);
+  height: 40%;
+  width: 80%;
+}
+.lesson__video iframe {
+  height: 100%;
+  width: 100%;
 }
 
 .payment {
-  height: 14.25%;
+  border: 1px solid rgb(18, 87, 31);
+  height: 14.14%;
   width: 95.43%;
   display: flex;
   flex-direction: column;
@@ -688,27 +743,138 @@ li {
 }
 .payment__image-title {
   height: 19%;
-  width: 37.21%;
+  width: 45%;
+  display: flex;
+  align-items: end;
   border-radius: 0px 59px 0px 0px;
   background: rgb(255, 255, 255);
 }
+.payment__image-title .payment__image-text {
+  font-size: 290%;
+}
 .payment__limit {
-  width: 64.26%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .payment__limit-emoji {
-  width: 113px;
-  height: 105px;
+  width: 15%;
 }
 .payment__limit #fire-one {
   align-self: flex-start;
 }
 .payment__limit #fire-two {
   align-self: flex-end;
+  transform: rotate(68.81deg);
 }
-.footer {
+.payment__list {
+  height: 30.94%;
   display: flex;
-  height: 5%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.payment__list-item {
+  font-size: 140%;
+}
+.payment__price {
+  border: 1px solid rgb(150, 161, 51);
+  height: 20%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.payment__price #fire-three {
+  width: 20%;
+  align-self: flex-end;
+  transform: rotate(68.81deg);
+  margin-bottom: -20%;
+}
+.payment__price-wrapper {
+  border: 1px solid rgb(173, 99, 216);
+  height: 40%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/main/frame-small.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+}
+.payment__price-wrapper .payment__price-sum {
+  text-align: center;
+}
+.payment__price #finger {
+  width: 10%;
+  padding-top: 10%;
+}
+.payment__button {
+  height: 4.32%;
+  width: 48.74%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: rgb(223, 140, 176);
+}
+.payment__button-text {
+  color: rgb(255, 255, 255);
+  font-size: 240%;
+}
+.payment__note {
+  color: #000;
+  font-family: "Museo Sans Cyrl", sans-serif;
+  font-size: 80%;
+  font-weight: 250;
+  line-height: 126%;
+  letter-spacing: 2%;
+  text-align: left;
+}
+
+.footer {
+  border: 1px solid rgb(161, 82, 13);
+  height: 2%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__profiles {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__profiles-title {
+  font-size: 100%;
+}
+.footer__profiles-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer__contacts {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__contacts-title {
+  font-size: 100%;
+}
+.footer__contacts-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .footer__profiles-icon {
+  max-width: 50px;
 }/*# sourceMappingURL=index.css.map */
